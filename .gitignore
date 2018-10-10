@@ -8,7 +8,9 @@ dev.db
 README.md
 node_modules
 site_media
+**/site_media
 media/**
+**/media
 local_settings.py
 CONTRIBUTING.md
 LICENSE
