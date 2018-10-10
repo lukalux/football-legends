@@ -1,0 +1,14 @@
+dev.db
+*.pyc
+.DS_Store
+*.pyo
+.idea
+*.iml
+*.yml
+README.md
+node_modules
+site_media
+media/**
+local_settings.py
+CONTRIBUTING.md
+LICENSE

@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static staticfiles %}
+
+{% block article %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 article-container">
+            <h2>{{ article.0.title }}</h2>
+            <h6>Published on {{ article.0.created_at }}</h6>
+            <img src="{{ article.0.photo.url }}" class="article-main-image" />
+            <p>{{ article.0.content|safe }}</p>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-0 col-sm-0 col-lg-2"></div>
+        <div class="col-12 col-sm-12 col-lg-8 card-container">
+            <h3>PLAYER CARD</h3>
+            <div class="row">
+                <div class="col-12">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Name</td>
+                                <td>{{ card.0.name }}</td>
+                            </tr>
+                            <tr>
+                                <td>Nickname</td>
+                                <td>{{ card.0.nickname }}</td>
+                            </tr>
+                            <tr>
+                                <td>Nation</td>
+                                <td>{{ card.0.nation }}</td>
+                            </tr>
+                            <tr>
+                                <td>Born</td>
+                                <td>{{ card.0.born }}</td>
+                            </tr>
+                            <tr>
+                                <td>Years active</td>
+                                <td>{{ card.0.active }}</td>
+                            </tr>
+                            <tr>
+                                <td>Clubs played</td>
+                                <td><pre>{{ card.0.clubs }}</pre></td>
+                            </tr>
+                            <tr>
+                                <td>Total appearances</td>
+                                <td>{{ card.0.appearances }}</td>
+                            </tr>
+                            <tr>
+                                <td>Total goals</td>
+                                <td>{{ card.0.goals }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-0 col-sm-0 col-lg-2"></div>
+    </div>
+</div>
+
+
+{% endblock %}
