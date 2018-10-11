@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',
     'ckeditor_uploader',
+    'django.contrib.sitemaps',
+    # 'django.contrib.sites.models.Site',
 
     'legends.app',
 ]

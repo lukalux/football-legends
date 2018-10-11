@@ -20,11 +20,20 @@ from app.views import Home, Backup, Search, Articles, ArticlesUnpublished
 from django.conf.urls import include
 from django.conf.urls.static import static
 from django.conf import settings
+# from django.contrib.flatpages import views as flat_views
+from django.contrib.sitemaps.views import sitemap
+from app.sitemaps import ArticleSitemap
+#
+#
+sitemaps = {
+    'articles': ArticleSitemap
+}
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    url(r'^sitemap\.xml/$', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
     url(r'^$', Home.as_view(), name='home'),
     url(r'^search/$', views.Search, name='search'),
     url(r'^articles/(?P<id>[\d-]+)/$', Articles.as_view(), name='articles'),

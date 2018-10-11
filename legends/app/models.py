@@ -46,6 +46,12 @@ class Article(models.Model):
     def __unicode__(self):
         return "%s" % self.title
 
+    # NEEDED FOR SITEMAP GENERATOR #
+    ################################
+    def get_absolute_url(self):
+        return "/articles/%i/" % self.id
+    ################################
+
     def save(self, *args, **kwargs):
         if self.photo:
             image = Image.open(StringIO.StringIO(self.photo.read()))
