@@ -25,6 +25,7 @@ body .body-overlay {
   z-index: -1;
 }
 body .menu-button-container {
+  text-align: right;
   width: 100%;
   background: black;
 }
@@ -191,6 +192,39 @@ body .slider-container {
 }
 body .slider-container img {
   width: 100%;
+}
+body .slider-container button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 15px;
+  z-index: 99;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+@media (min-width: 200px) {
+  body .slider-container button {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  body .slider-container button {
+    display: block;
+    width: 40%;
+    font-size: 14px;
+  }
+}
+@media (min-width: 992px) {
+  body .slider-container button {
+    width: 40%;
+    font-size: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  body .slider-container button {
+    width: 30%;
+  }
 }
 body .bx-wrapper {
   margin: 0;
@@ -387,13 +421,18 @@ body .article-container img {
 @media (min-width: 200px) {
   body .article-container p {
     padding: 5px 5%;
-    text-align: center;
+    text-align: left;
   }
 }
 @media (min-width: 992px) {
   body .article-container p {
     text-align: left;
     padding: 0;
+  }
+}
+@media (min-width: 200px) {
+  body .article-container p img {
+    text-align: left;
   }
 }
 body .article-container h2, body .article-container h6 {

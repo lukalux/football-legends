@@ -4,6 +4,12 @@ $(document).ready(function() {
     $(".menu-search").css("padding-top", ($(".menu-search").height() - $("#custom-search-input").height()) / 2);
     $(".menu-contact-link").css("padding-top", ($(".menu-contact-link").height() - $(".menu-contact-link a").height()) / 2);
 
+    $("#open-popup").click(function() {
+        $('html, body').animate({
+            scrollTop: parseInt($("#mc_embed_signup").offset().top)
+        }, 500);
+    });
+    
     // bx-slider on header
     $(".slider").bxSlider({
         mode: 'fade',
@@ -18,5 +24,10 @@ $(document).ready(function() {
     });
 
     $("iframe").height($("iframe").width() * 0.6);
+
+    if ($(document).width() < 992) {
+        console.log(a[0]);
+        $(".article-container p img").parent().css("text-align", "center");
+    }
 
 });

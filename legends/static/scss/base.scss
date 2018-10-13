@@ -20,6 +20,7 @@ body {
     @media (min-width: 768px) {
       height: 70px;
     }
+    text-align: right;
     width: 100%;
     background: black;
     .menu-logo {
@@ -157,6 +158,31 @@ body {
     background: white;
     img {
       width: 100%;
+    }
+    button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 15px;
+      z-index: 99;
+      border-radius: 0;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      @media (min-width: 200px) {
+        display: none;
+      }
+      @media (min-width: 768px) {
+        display: block;
+        width: 40%;
+        font-size: 14px;
+      }
+      @media (min-width: 992px) {
+        width: 40%;
+        font-size: 18px;
+      }
+      @media (min-width: 1200px) {
+        width: 30%;
+      }
     }
   }
   .bx-wrapper {
@@ -351,11 +377,16 @@ body {
     p {
       @media (min-width: 200px) {
         padding: 5px 5%;
-        text-align: center;
+        text-align: left;
       }
       @media (min-width: 992px) {
         text-align: left;
         padding: 0;
+      }
+      img {
+        @media (min-width: 200px) {
+          text-align: left;
+        }
       }
     }
     h2, h6 {
