@@ -446,6 +446,19 @@ body .article-container h2, body .article-container h6 {
 body .article-container iframe {
   width: 100%;
 }
+body .article-container ul.share-buttons {
+  list-style: none;
+  display: inline-block;
+  padding: 20px 0;
+}
+body .article-container ul.share-buttons li {
+  width: 20%;
+  display: inline;
+}
+body .article-container ul.share-buttons li img {
+  max-width: 60px;
+  padding: 10px;
+}
 body .card-container {
   padding: 100px;
   text-align: center;
